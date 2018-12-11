@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Lobster+Two');
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter|Kaushan+Script|Lobster+Two');
+
+#container {
+    width: 90%;
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+    font-size: 3vh;
+}
+
+header {
+    font-family: 'Kaushan Script', cursive;
+    text-align: center;
+    font-size: 5vh;
+    padding: .5rem;
+}
+
+footer {
+    font-family: 'Kaushan Script', cursive;
+    text-align: center;
+    font-size: 2.5vh;
+    padding: .5rem;
+}
+
+header img {
+    width: 100%;
+    height: 40vw;
+}
+
+header p {
+    margin-top: -5vw;
+}
+
+section h2 {
+    font-family: 'Kaushan Script', cursive;
+    font-family: 'Lobster Two', cursive;
+    font-family: 'Architects Daughter', cursive;
+}
+
+input {
+    font-family: 'Kaushan Script', cursive;
+    font-family: 'Lobster Two', cursive;
+    border: 2px solid lightgreen;
+    padding: 5px;
+    font-size: 3vh;
+    border-radius: 10px;
+}
+
+button {
+    font-family: 'Kaushan Script', cursive;
+    font-family: 'Lobster Two', cursive;
+}
+
+.button {
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 3vh;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: darkblue;
+    background-color: gainsboro;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px darkgray;
+}
+
+.button:hover {
+    background-color: skyblue;
+}
+
+.button:active {
+    background-color: gainsboro;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+hr {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#result {
+    margin: 2px dotted yellow;
+    width: 90%;
+    margin: 0 auto;
+    color: black;
+    border-radius: 10px;
+}
+
+#result div {
+    padding: 10px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.big {
+    font-size: 8.5vh;
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+#result {
+    display: flex;
+    flex-direction: column;
+    background-color: #1D6DA2;
+    background-image: linear-gradient(to bottom right, #0A0A54, #4FADEC);
+}
+
+.middle {
+    background-color: #CFE7F7;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.top div {
+    width: 100%;
+}
+
+.middle p {
+    margin-bottom: 0;
+}
+
+.split {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.split div {
+    width: 100%;
+}
+
+.fontbig {
+    font-size: 7vh;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.top img {
+    width: 100%;
+}
+
+.icon {
+    width: 50%;
+}
+
+.big {
+    font-size: 12vh;
+    margin-bottom: 1px;
+    margin-top: 1px;
+}
+
+.subtitle {
+    font-size: 4vh;
+    font-weight: bolder;
+}
+
+/*animation css*/
+.tetrominos,
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-112px, -96px);
+    transform: translate(-112px, -96px);
+}
+
+.tetromino1 {
+    width: 96px;
+    height: 112px;
+    position: absolute;
+    transition: all ease 0.3s;
+    background: url("http://www.clker.com/cliparts/Y/P/T/T/s/e/sun-th.png") no-repeat top center;
+}
+
+.tetromino2 {
+    width: 96px;
+    height: 112px;
+    position: absolute;
+    transition: all ease 0.3s;
+    background: url("https://www.fsbnh.bank/wp-content/uploads/2016/07/unbrella.png") no-repeat top center;
+}
+
+.tetromino3 {
+    width: 96px;
+    height: 112px;
+    position: absolute;
+    transition: all ease 0.3s;
+    background: url("https://www.vricon.com/wp-content/uploads/2017/06/Vricon-Point-Cloud-100x100.png") no-repeat top center;
+}
+
+.tetromino4 {
+    width: 96px;
+    height: 112px;
+    position: absolute;
+    transition: all ease 0.3s;
+    background: url("https://stopsphc.com/wp-content/uploads/2017/05/Snow-Flake-Icon-100.png") no-repeat top center;
+}
+
+.box1 {
+    -webkit-animation: tetromino1 1.5s ease-out infinite;
+    animation: tetromino1 1.5s ease-out infinite;
+}
+
+.box2 {
+    -webkit-animation: tetromino2 1.5s ease-out infinite;
+    animation: tetromino2 1.5s ease-out infinite;
+}
+
+.box3 {
+    -webkit-animation: tetromino3 1.5s ease-out infinite;
+    animation: tetromino3 1.5s ease-out infinite;
+    z-index: 2;
+}
+
+.box4 {
+    -webkit-animation: tetromino4 1.5s ease-out infinite;
+    animation: tetromino4 1.5s ease-out infinite;
+}
+
+@-webkit-keyframes tetromino1 {
+
+    0%,
+    40% {
+        /* compose logo */
+        /* 1 on 3 */
+        /* L-shape */
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    50% {
+        /* pre-box */
+        -webkit-transform: translate(48px, -27px);
+        transform: translate(48px, -27px);
+    }
+
+    60%,
+    100% {
+        /* box */
+        /* compose logo */
+        -webkit-transform: translate(96px, 0);
+        transform: translate(96px, 0);
+    }
+}
+
+@keyframes tetromino1 {
+
+    0%,
+    40% {
+        /* compose logo */
+        /* 1 on 3 */
+        /* L-shape */
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    50% {
+        /* pre-box */
+        -webkit-transform: translate(48px, -27px);
+        transform: translate(48px, -27px);
+    }
+
+    60%,
+    100% {
+        /* box */
+        /* compose logo */
+        -webkit-transform: translate(96px, 0);
+        transform: translate(96px, 0);
+    }
+}
+
+@-webkit-keyframes tetromino2 {
+
+    0%,
+    20% {
+        /* compose logo */
+        /* 1 on 3 */
+        -webkit-transform: translate(96px, 0px);
+        transform: translate(96px, 0px);
+    }
+
+    40%,
+    100% {
+        /* L-shape */
+        /* box */
+        /* compose logo */
+        -webkit-transform: translate(144px, 27px);
+        transform: translate(144px, 27px);
+    }
+}
+
+@keyframes tetromino2 {
+
+    0%,
+    20% {
+        /* compose logo */
+        /* 1 on 3 */
+        -webkit-transform: translate(96px, 0px);
+        transform: translate(96px, 0px);
+    }
+
+    40%,
+    100% {
+        /* L-shape */
+        /* box */
+        /* compose logo */
+        -webkit-transform: translate(144px, 27px);
+        transform: translate(144px, 27px);
+    }
+}
+
+@-webkit-keyframes tetromino3 {
+    0% {
+        /* compose logo */
+        -webkit-transform: translate(144px, 27px);
+        transform: translate(144px, 27px);
+    }
+
+    20%,
+    60% {
+        /* 1 on 3 */
+        /* L-shape */
+        /* box */
+        -webkit-transform: translate(96px, 54px);
+        transform: translate(96px, 54px);
+    }
+
+    90%,
+    100% {
+        /* compose logo */
+        -webkit-transform: translate(48px, 27px);
+        transform: translate(48px, 27px);
+    }
+}
+
+@keyframes tetromino3 {
+    0% {
+        /* compose logo */
+        -webkit-transform: translate(144px, 27px);
+        transform: translate(144px, 27px);
+    }
+
+    20%,
+    60% {
+        /* 1 on 3 */
+        /* L-shape */
+        /* box */
+        -webkit-transform: translate(96px, 54px);
+        transform: translate(96px, 54px);
+    }
+
+    90%,
+    100% {
+        /* compose logo */
+        -webkit-transform: translate(48px, 27px);
+        transform: translate(48px, 27px);
+    }
+}
+
+@-webkit-keyframes tetromino4 {
+
+    0%,
+    60% {
+        /* compose logo */
+        /* 1 on 3 */
+        /* L-shape */
+        /* box */
+        -webkit-transform: translate(48px, 27px);
+        transform: translate(48px, 27px);
+    }
+
+    90%,
+    100% {
+        /* compose logo */
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes tetromino4 {
+
+    0%,
+    60% {
+        /* compose logo */
+        /* 1 on 3 */
+        /* L-shape */
+        /* box */
+        -webkit-transform: translate(48px, 27px);
+        transform: translate(48px, 27px);
+    }
+
+    90%,
+    100% {
+        /* compose logo */
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}
+
+/*fin de la animacion*/
+
+/*MEDIA QUERY FOR MEDIUM AND LARGE VIEW*/
+@media only screen and (min-width: 665px) {
+    .middle {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .top div {
+        width: 50%;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+    }
+
+    header p {
+        font-size: 7vh;
+        margin-top: -15vw;
+    }
+
+    #container {
+        font-size: 3vh;
+    }
+
+    #result {
+        width: 70%;
+    }
+
+    .middle p {
+        margin: 0 auto;
+    }
+
+    .big {
+        font-size: 10vh;
+        margin-bottom: 1px;
+    }
+}
+
+@media only screen and (min-width: 1110px) {
+    .big {
+        margin: 0 auto;
+        font-size: 15vh;
+        padding-right: 5vw;
+    }
+}
