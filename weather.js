@@ -1,20 +1,21 @@
 $(document).ready(function () {
-    var delay = 1000;
+    var delay = 2000;
 
     $('#submitWeather').click(function () {
         var city = $("#city").val();
         if (city != '') {
             $.ajax({
-                url: "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&APPID=908d84ab33ac4de4474fecfff8ce13ea",
+                url: "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&APPID=908d84ab33ac4de4474fecfff8ce13ea",
                 type: "GET",
                 dataType: "jsonp",
                 beforeSend: function () {
                     $('#loadingmessage').show();
+                    $('#loadingtext').show();
                 },
                 success: function (data) {
                     setTimeout(function() {
                         console.log(data);
-                        $('#loadingmessage').hide();
+                        $('#loadingtext').hide();
                         var widget = show(data);
                         $("#result").html(widget);
                         var keyword = getCondition(data.weather[0].description);
