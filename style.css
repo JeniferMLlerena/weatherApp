@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Architects+Daughter|Kaushan+Script|Lobster+Two');
 
 #container {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     background-color: black;
     color: white;
@@ -191,6 +191,7 @@ hr {
         width: 1em;
     }
 }
+
 /*end loading text*/
 
 /*animation css*/
@@ -440,6 +441,10 @@ hr {
 
 /*MEDIA QUERY FOR MEDIUM AND LARGE VIEW*/
 @media only screen and (min-width: 665px) {
+    #container {
+        width: 90%;
+    }
+
     .middle {
         display: flex;
         flex-direction: row;
